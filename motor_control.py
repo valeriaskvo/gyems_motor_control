@@ -1,8 +1,6 @@
-import numpy as np
-from time import perf_counter, sleep
+from time import perf_counter
 from can import CAN_Bus
 from motors.gyems import GyemsDRC
-import matplotlib.pyplot as plt
 
 def pd_control(motor, control_param):
     q, dq = motor.state['angle'], motor.state['speed']
